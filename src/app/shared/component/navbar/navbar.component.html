@@ -1,15 +1,30 @@
+<div class="flex fixed top-0 left-0 w-full p-20px bg-white/80 shadow-md shadow-black/30 z-[1000] ">
+    <div class="flex items-center justify-center p-20px">
+        <a href="#homepage">
+            <img
+                    ngSrc="/assets/icons/logo.svg"
+                    alt="logo"
+                    class="w-[95px] h-[70px] cursor-pointer"
+                    height="70"
+                    width="95"
+            />
+        </a>
+    </div>
 
-    <div class="flex fixed top-0 left-0 w-full bg-white/80 shadow-md shadow-black/30 z-[1000]">
-        <div class="flex items-center justify-center">
-            <svg class="h-12 w-auto" src="./src/app/assets/icons/logo.svg" />
-        </div>
-    <div class="flex justify-between items-center, px-[22px]">
 
-        <div class="flex gap-5 fixed">
-            <div><a class="" href="#homepage">Főoldal</a></div>
+    <div class="sm:hidden">
+        <img
+                ngSrc="/assets/icons/manu_icon.svg"
+                alt="menu-icon"
+                class="flex items-center"
+                height="24"
+                width="24"
+        />
+    </div>
+    <div class="hidden sm:flex gap-5 items-center">
+            <div><a href="#homepage">Főoldal</a></div>
             <div><a href="#galeria">Galéria</a></div>
             <div><a href="#aboutus">Rólunk</a></div>
             <div><a href="#contact">Kapcsolat</a></div>
         </div>
-    </div>
     </div>
