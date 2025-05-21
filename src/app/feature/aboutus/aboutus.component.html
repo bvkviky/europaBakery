@@ -1,30 +1,21 @@
-<div>
-    <div class="h-screen flex flex-col justify-center items-center text-2xl" id="galeria">
-        <div class="page-content product-feature-section">
-            <div class="feature-images">
-                <div class="img-row img-row-top">
-                    <img src="assets/images/bakery-top 1.png" alt="Csomagolás" class="feature-img small" />
-                    <div class="img-row img-row-bottom">
-                        <img src="assets/images/bakery-left.png" alt="Csomagolás" class="feature-img small" />
-                        <img src="assets/images/bakery-center.png" alt="Pult" class="feature-img small" />
-                    </div>
-                </div>
+<div class="min-h-screen w-full bg-cover bg-center bg-no-repeat flex flex-col md:flex-row items-center justify-between p-4">
 
-                <div class="feature-text">
-                    <h2>Long heading is what you see here in this feature section</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-                    <div class="subheadings">
-                        <div>
-                            <h4>Subheading one</h4>
-                            <p>Lorem ipsum dolor sit amet...</p>
-                        </div>
-                        <div>
-                            <h4>Subheading two</h4>
-                            <p>Lorem ipsum dolor sit amet...</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- Left Image -->
+    <div class="w-full md:w-1/4 h-60 md:h-full flex justify-center items-center">
+        <img ngSrc="/assets/images/bakery-left.png" alt="Left" class="w-full h-full object-cover" height="296"
+             width="235"/>
     </div>
+
+    <!-- Center Text -->
+    <div class="w-full md:w-2/4 text-center text-white p-6 flex flex-col justify-center items-center">
+        <h1 class="text-3xl md:text-5xl font-bold mb-4">Középső Szöveg</h1>
+        <p class="text-lg md:text-xl max-w-md">Ez a szöveg a középső szakaszban jelenik meg, mobilon is jól olvashatóan, két kép között.</p>
+    </div>
+
+    <!-- Right Image -->
+    <div class="w-full md:w-1/4 h-60 md:h-full flex justify-center items-center">
+        <img ngSrc="/assets/images/bakery-top 1.png" alt="Right" class="w-full h-full object-cover" height="296"
+             width="198"/>
+    </div>
+
 </div>

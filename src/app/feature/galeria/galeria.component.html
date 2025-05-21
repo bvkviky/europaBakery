@@ -1,3 +1,23 @@
-<div class="w-full" id="galeria">
-    <p>Hellószia galéria</p>
+<div id="GFG" class="h-screen flex flex-col items-center justify-center bg-white">
+    <h1 class=" font-semibold text-center ">
+        Galéria
+    </h1>
+
+    <div class="w-4/5">
+        <p-carousel [value]="images" [autoplayInterval]="3000" [circular]="true" [numVisible]="1">
+            <ng-template let-image pTemplate="item">
+                <div class="w-full flex justify-center">
+                    <div class="rounded-md border border-gray-300 bg-gray-50 p-6 shadow-md text-center">
+                        <img
+                                [src]="image.previewImageSrc"
+                                [alt]="image.alt"
+                                [title]="image.title"
+                                class="w-full h-72 object-contain rounded"
+                        />
+                        <h3 class="mt-4 text-lg font-medium text-red-600">{{ image.title }}</h3>
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+    </div>
 </div>
