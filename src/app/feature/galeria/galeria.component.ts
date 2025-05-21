@@ -5,13 +5,13 @@ import { SharedModule } from 'primeng/api';
 
 @Component({
   selector: 'app-galeria',
-  standalone: true,
   imports: [CommonModule, Carousel,SharedModule],
   templateUrl: './galeria.component.html',
   styleUrls: ['./galeria.component.css'],
+  host: { ngSkipHydration: 'true' },
 })
 export class GaleriaComponent {
-  title = 'GFG';
+  title = 'galeria';
 
   images= [
     {

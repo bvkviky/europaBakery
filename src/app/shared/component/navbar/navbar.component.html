@@ -1,8 +1,8 @@
-<div class=" flex fixed top-0 left-0 w-full  bg-white/80 shadow-md shadow-black/30 px-5 z-[1000] justify-between p-20px">
+<div [class]="navbarClass">
     <div class="flex items-center justify-center ">
         <a href="#homepage">
             <img
-                    ngSrc="/assets/icons/logo.svg"
+                    [ngSrc]="isTop ? '/assets/icons/logo0.svg' : '/assets/icons/logo1.svg'"
                     alt="logo"
                     class="w-[95px] h-[70px] cursor-pointer"
                     height="70"
@@ -22,9 +22,9 @@
         />
     </div>
     <div class="hidden sm:flex gap-5 items-center">
-            <div><a href="#homepage">Főoldal</a></div>
-            <div><a href="#galeria">Galéria</a></div>
-            <div><a href="#aboutus">Rólunk</a></div>
-            <div><a href="#contact">Kapcsolat</a></div>
+            <div><a [ngClass]="getLinkClass()" href="#homepage">Főoldal</a></div>
+            <div><a [ngClass]="getLinkClass()" href="#galeria">Galéria</a></div>
+            <div><a [ngClass]="getLinkClass()" href="#aboutus">Rólunk</a></div>
+            <div><a [ngClass]="getLinkClass()" href="#contact">Kapcsolat</a></div>
         </div>
     </div>
