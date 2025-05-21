@@ -1,12 +1,12 @@
 import { Component} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {Carousel} from "primeng/carousel";
-import {PrimeTemplate} from "primeng/api";
+import { SharedModule } from 'primeng/api';
 
 @Component({
   selector: 'app-galeria',
   standalone: true,
-  imports: [CommonModule, Carousel, PrimeTemplate],
+  imports: [CommonModule, Carousel,SharedModule],
   templateUrl: './galeria.component.html',
   styleUrls: ['./galeria.component.css'],
 })
