@@ -16,35 +16,34 @@ export class GaleriaComponent {
   images= [
     {
       previewImageSrc:
-          'https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210203171024/CSSTutorial.png',
+          '/assets/images/bakery-left.png',
       thumbnailImageSrc:
-          'https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210203171024/CSSTutorial.png',
+  '/assets/images/bakery-left.png',
       alt: 'Cascading Style Sheet',
-      title: 'CSS'
+
     },
     {
       previewImageSrc:
-          'https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210322182256/AngularJS-Tutorial.png',
+          '/assets/images/bakery-center.png',
       thumbnailImageSrc:
-          'https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210322182256/AngularJS-Tutorial.png',
+          '/assets/images/bakery-center.png',
       alt: 'Angular for Front end',
-      title: 'Angular'
+
     },
     {
       previewImageSrc:
-          'https://media.geeksforgeeks.org/wp-content/cdn-uploads/Java.png',
+          '/assets/images/bakery-top 1.png',
       thumbnailImageSrc:
-          'https://media.geeksforgeeks.org/wp-content/cdn-uploads/Java.png',
+          '/assets/images/bakery-top 1.png',
       alt: 'Java Programming Language',
-      title: 'Java'
+
     },
     {
       previewImageSrc:
-          'https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220401124017/HTML-Tutorial.png',
+          '/assets/images/product_show.png',
       thumbnailImageSrc:
-          'https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220401124017/HTML-Tutorial.png',
+          '/assets/images/product_show.png',
       alt: 'HyperText Markup Language',
-      title: 'HTML'
     },
   ];
 }

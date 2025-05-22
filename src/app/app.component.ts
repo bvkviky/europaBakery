@@ -14,5 +14,5 @@ import {ContactComponent} from "./feature/contact/contact.component";
   standalone: true
 })
 export class AppComponent {
-  title = 'bakery';
+  title = 'europafrisspekseg';
 }
