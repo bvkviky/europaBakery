@@ -13,6 +13,10 @@ export class NavbarComponent {
     isTop = true;
     isOpen = false;
 
+    navigateTo(id: string) {
+        this.isOpen = false;
+    }
+
     get navbarClass(): string {
         return this.isTop
             ? 'flex fixed top-0 left-0 w-full px-5 justify-between p-20px transition-all duration-300 h-[60px]'
