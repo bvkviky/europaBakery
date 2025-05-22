@@ -5,9 +5,10 @@ import {HomeComponent} from "./feature/home/home.component";
 import {GaleriaComponent} from "./feature/galeria/galeria.component";
 import {AboutusComponent} from "./feature/aboutus/aboutus.component";
 import {ContactComponent} from "./feature/contact/contact.component";
+import {FooterComponent} from "./feature/footer/footer.component";
 
 @Component({
-  imports: [RouterModule, NavbarComponent, HomeComponent, GaleriaComponent, AboutusComponent, ContactComponent],
+    imports: [RouterModule, NavbarComponent, HomeComponent, GaleriaComponent, AboutusComponent, ContactComponent, FooterComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

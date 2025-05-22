@@ -1,18 +1,18 @@
-<div id="galeria" class="h-screen flex flex-col items-center justify-center bg-[#F6F1EB]">
-    <h1 class=" font-semibold text-center mb-6">
+<div id="galeria" class="h-screen flex flex-col items-center justify-center bg-[url('/assets/images/680c92de6c589c3bcf263f536c6e2250.jpg')] ">
+    <h1 class=" font-semibold text-center mb-12 pt-6">
         Galéria
     </h1>
 
     <div class="w-4/5">
         <p-carousel [value]="images" [autoplayInterval]="3000" [circular]="true" [numVisible]="1">
             <ng-template let-image pTemplate="item">
-                <div class="w-full flex justify-center">
-                    <div class="rounded-md border border-gray-300 bg-gray-50 p-6 shadow-md text-center">
+                <div class="w-full flex justify-center pb-12">
+                    <div class="">
                         <img
                                 [src]="image.previewImageSrc"
                                 [alt]="image.alt"
                                 [title]="image.title"
-                                class="w-full h-72 object-contain rounded"
+                                class="w-full h-72 md:h-96 lg:h-[500px] object-contain rounded"
                         />
                      <!--   <h3 class="mt-4 text-lg font-medium">{{ image.title }}</h3> -->
                     </div>
