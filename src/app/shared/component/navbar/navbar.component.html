@@ -13,17 +13,20 @@
     </div>
     <!-- MOBILE MENU BUTTON (CDK Overlay Trigger) -->
     <div class="sm:hidden content-center cursor-pointer">
-        <img
-                (click)="isOpen = !isOpen"
-                cdkOverlayOrigin
-                #trigger="cdkOverlayOrigin"
-                [ngSrc]="isTop ? '/assets/icons/menuicontop.svg' : '/assets/icons/menu_icon.svg'"
-                alt="menu-icon"
-                id="menuSVG"
-                class="flex items-center"
-                height="24"
-                width="24"
-        />
+      <img
+        (click)="isOpen = !isOpen"
+        (keydown.enter)="isOpen = !isOpen"
+        (keydown.space)="isOpen = !isOpen"
+        tabindex="0"
+        role="button"
+        cdkOverlayOrigin
+        #trigger="cdkOverlayOrigin"
+        [ngSrc]="isTop ? '/assets/icons/menutop.svg' : '/assets/icons/menu_icon.svg'"
+        alt="menu-icon"
+        class="flex items-center"
+        height="24"
+        width="24"
+      />
     </div>
 
     <!-- DESKTOP NAVIGATION -->
@@ -48,6 +51,6 @@
             <a href="#galeria" class="hover:text-[#534231] text-[#E3B577]" (click)="navigateTo('galeria')">Galéria</a>
             <a href="#aboutus" class="hover:text-[#534231] text-[#E3B577]" (click)="navigateTo('aboutus')">Rólunk</a>
             <a href="#contact" class="hover:text-[#534231] text-[#E3B577]" (click)="navigateTo('contact')">Kapcsolat</a>
-            <a href="#english" class="hover:text-[#534231] text-[#E3B577]" (click)="navigateTo('english')">English</a>
+            <a href="#english" class="hover:text-[#534231] text-[#E3B577]" (click)="navigateTo('english')">EN</a>
         </div>
     </ng-template></div>

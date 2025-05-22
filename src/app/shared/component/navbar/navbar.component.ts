@@ -13,9 +13,14 @@ export class NavbarComponent {
     isTop = true;
     isOpen = false;
 
-    navigateTo(id: string) {
-        this.isOpen = false;
+  navigateTo(id: string) {
+    this.isOpen = false;
+
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
+  }
 
     get navbarClass(): string {
         return this.isTop
