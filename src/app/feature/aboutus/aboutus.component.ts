@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'app-aboutus',
-  imports: [CommonModule],
+    imports: [CommonModule, NgOptimizedImage],
   templateUrl: './aboutus.component.html',
   styleUrl: './aboutus.component.css',
 })

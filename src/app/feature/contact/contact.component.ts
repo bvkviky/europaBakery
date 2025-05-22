@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {FormsModule} from "@angular/forms";
+import {Input} from "postcss";
 
 @Component({
   selector: 'app-contact',
-  imports: [CommonModule],
+    imports: [CommonModule, FormsModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css',
 })
-export class ContactComponent {}
+export class ContactComponent {
+
+}
