@@ -22,7 +22,7 @@
     </div>
 
     <!-- Google Map Embed -->
-    <div class="flex w-full h-auto md:justify-center sm:h-auto">
+    <div *ngIf="loadMapIframe; else showConsentNotice"  class="flex w-full h-auto md:justify-center sm:h-auto">
       <iframe
         title="Budapest, Lehel utca 4a térkép"
         src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d21554.022812149935!2d19.053165545735688!3d47.52394010564147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x4741dbf548b39c95%3A0x44e91302bacbf0d7!2sBudapest%2C%20Lehel%20u%204a%2C%201134!3m2!1d47.5182438!2d19.0638415!5e0!3m2!1sen!2shu!4v1747820694276!5m2!1sen!2shu"
@@ -34,6 +34,11 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
     </div>
+    <ng-template #showConsentNotice>
+      <div class="text-center p-4 text-sm">
+        A térkép megtekintéséhez kérem, fogadja el a cookie-kat.
+      </div>
+    </ng-template>
 
   </div>
 </div>

@@ -50,7 +50,7 @@
       "style": "css"
     }
   },
-  "defaultProject": "bakery",
+  "defaultProject": "europafrisspekseg",
   "plugins": [
     {
       "plugin": "@nx/jest/plugin",
