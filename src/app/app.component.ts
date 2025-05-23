@@ -6,9 +6,12 @@ import {GaleriaComponent} from "./feature/galeria/galeria.component";
 import {AboutusComponent} from "./feature/aboutus/aboutus.component";
 import {ContactComponent} from "./feature/contact/contact.component";
 import {FooterComponent} from "./feature/footer/footer.component";
+import { NgcCookieConsentModule } from 'ngx-cookieconsent';
+
+
 
 @Component({
-    imports: [RouterModule, NavbarComponent, HomeComponent, GaleriaComponent, AboutusComponent, ContactComponent, FooterComponent],
+    imports: [RouterModule, NavbarComponent, HomeComponent, GaleriaComponent, AboutusComponent, ContactComponent, FooterComponent,NgcCookieConsentModule],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
