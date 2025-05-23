@@ -1,93 +1,59 @@
-<div class=" flex  justify-evenly bg-[#F6F1EB] py-4">
-    <!-- section 1 -->
-    <div class="flex" >
-        <div class=" flex flex-col">
-            <p class="font-light text-[#2E2B28] leading-none text-center box-border font-sans"><img
-                    ngSrc="/assets/icons/home.svg"
-                    alt="logo"
-                    height="9"
-                    width="18"
+<!-- Footer Navigation Section -->
+<footer class="flex justify-evenly bg-[#F6F1EB] py-4" aria-labelledby="footer-heading">
+  <h2 id="footer-heading" class="sr-only">Oldalsáv és Elérhetőségek</h2>
 
-            />
-                Elérhetőség
-                <img
-                        ngSrc="/assets/icons/line.svg"
-                        alt="line"
-                        width="258"
-                        height="1"
-                        class="py-2"
-                />
-            </p>
-            <p class="font-light text-[#2E2B28] leading-none text-center box-border font-sans py-1">1092 Budapest, Ráday u. 30.</p>
-            <p class="font-light text-[#2E2B28] leading-none text-center box-border font-sans py-1">+36 30 682 6631</p>
-
-        </div>
+  <!-- Section 1: Contact Info -->
+  <section aria-label="Elérhetőség" class="flex">
+    <div class="flex flex-col items-center text-center">
+      <img src="/assets/icons/home.svg" alt="" height="9" width="18" aria-hidden="true" />
+      <p class="font-light text-[#2E2B28] leading-none font-sans">Elérhetőség</p>
+      <img src="/assets/icons/line.svg" alt="" width="258" height="1" class="py-2" aria-hidden="true" />
+      <address class="not-italic py-1 text-[#2E2B28] font-light font-sans">
+        1092 Budapest, Ráday u. 30.
+        <br />
+        <a href="tel:+36306826631" class="hover:underline">+36 30 682 6631</a>
+      </address>
     </div>
-  <!-- svg -->
-  <div class="flex">
+  </section>
 
-    <a class="flex justify-center content-center" href="#homepage" id="homepage">
-
-      <img
-        ngSrc="/assets/icons/logo1.svg"
-        alt="logo"
-        class="cursor-pointer"
-        height="60"
-        width="92"
-
-      />
+  <!-- Logo Navigation -->
+  <nav aria-label="Vissza a kezdőlapra" class="flex items-center">
+    <a href="#homepage">
+      <img src="/assets/icons/logo1.svg" alt="Vissza a Főoldalra" class="cursor-pointer" height="60" width="92" />
     </a>
+  </nav>
+
+  <!-- Section 2: Page Links -->
+  <section aria-label="Oldalak" class="flex">
+    <div class="flex flex-col items-center text-center">
+      <img src="/assets/icons/lan.svg" alt="" height="9" width="18" aria-hidden="true" />
+      <p class="font-light text-[#2E2B28] leading-none font-sans">Oldalak</p>
+      <img src="/assets/icons/line.svg" alt="" width="258" height="1" class="py-2" aria-hidden="true" />
+      <ul class="list-none p-0 m-0">
+        <li><a href="#homepage" class="block py-1 hover:underline text-[#2E2B28] font-light font-sans">Főoldal</a></li>
+        <li><a href="#aboutus" class="block py-1 hover:underline text-[#2E2B28] font-light font-sans">Rólam</a></li>
+        <li><a href="#gallery" class="block py-1 hover:underline text-[#2E2B28] font-light font-sans">Galéria</a></li>
+        <li><a href="#contact" class="block py-1 hover:underline text-[#2E2B28] font-light font-sans">Kapcsolat</a></li>
+      </ul>
+    </div>
+  </section>
+</footer>
+
+<!-- Footer Legal Section -->
+<div role="contentinfo" class="flex flex-col items-center bg-[#F6F1EB] py-4" aria-labelledby="legal-heading">
+  <h2 id="legal-heading" class="sr-only">Jogi Információk</h2>
+
+  <!-- Divider -->
+  <div class="w-full flex justify-center">
+    <img src="/assets/icons/lineb.svg" alt="" width="1268" height="1" aria-hidden="true" />
   </div>
-    <!-- section 2 -->
-    <div class="flex">
-        <div class=" flex flex-col">
-            <p class="font-light text-[#2E2B28] leading-none text-center box-border font-sans" ><img
-                    ngSrc="/assets/icons/lan.svg"
-                    alt="logo"
-                    height="9"
-                    width="18"
 
-            />
-                Oldalak
-                <img
-                        ngSrc="/assets/icons/line.svg"
-                        alt="line"
-                        width="258"
-                        height="1"
-                        class="py-2"
-                />
-            </p>
-            <p class="font-light text-[#2E2B28] leading-none text-center box-border font-sans py-1">Főoldal</p>
-            <p class="font-light text-[#2E2B28] leading-none text-center box-border font-sans py-1">Rólam</p>
-            <p class="font-light text-[#2E2B28] leading-none text-center box-border font-sans py-1">Galéria</p>
-            <p class="font-light text-[#2E2B28] leading-none text-center box-border font-sans py-1">Kapcsolat</p>
-        </div>
-
-    </div>
-
-</div>
-
-
-<div>
-    <!-- consents & rights -->
-    <div class="flex flex-col items-center bg-[#F6F1EB] py-4">
-        <!-- elválasztó vonal -->
-        <div class="w-full flex justify-center">
-            <img
-                    ngSrc="/assets/icons/lineb.svg"
-                    alt="line"
-                    width="1268"
-                    height="1"
-            />
-        </div>
-
-        <!-- linkek -->
-        <div class="flex gap-4 mt-2">
-            <p class="text-[#2E2B28] hover:underline font-light font-sans text-xs">Európa Friss Pékség - Minden jog fenntartva!</p>
-            <span class="text-[#CECECE] font-light font-sans text-xs">|</span>
-            <a href="https://policies.google.com/privacy?hl=hu" class="text-[#2E2B28] hover:underline font-light font-sans text-xs">Adatvédelmi tájékoztató</a>
-            <span class="text-[#CECECE] font-light font-sans text-xs">|</span>
-            <a href="/suti-szabalyzat" class="text-[#2E2B28] hover:underline font-light font-sans text-xs">Süti szabályzat</a>
-        </div>
-    </div>
+  <!-- Legal Links -->
+  <div class="flex gap-4 mt-2 flex-wrap justify-center text-center">
+    <p class="text-[#2E2B28] hover:underline font-light font-sans text-xs">Európa Friss Pékség - Minden jog fenntartva!</p>
+    <span class="text-[#CECECE] font-light font-sans text-xs" aria-hidden="true">|</span>
+    <a href="https://policies.google.com/privacy?hl=hu" class="text-[#2E2B28] hover:underline font-light font-sans text-xs">Adatvédelmi tájékoztató</a>
+    <span class="text-[#CECECE] font-light font-sans text-xs" aria-hidden="true">|</span>
+    <a href="/suti-szabalyzat" class="text-[#2E2B28] hover:underline font-light font-sans text-xs">Süti szabályzat</a>
+  </div>
 </div>
