@@ -18,38 +18,40 @@ export class ContactComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    if (isPlatformBrowser(this.platformId) && window.cookieconsent) {
-      window.cookieconsent.initialise({
-        palette: {
-          popup: { background: '#000' },
-          button: { background: '#f1d600' },
-        },
-        theme: 'classic',
-        type: 'opt-in',
-        storage: 'none',
-        content: {
-          message:
-            'Ez az oldal cookie-kat használ a Google Térkép megjelenítéséhez.',
-          allow: 'Elfogadom',
-          deny: 'Elutasítom',
-          link: 'További információk',
-          href: 'https://policies.google.com/privacy?hl=hu',
-        },
-        onInitialise: (status: string) => {
-          this.ngZone.run(() => {
-            this.loadMapIframe = status === 'allow';
+    if (isPlatformBrowser(this.platformId)) {
+      const waitForCookieConsent = setInterval(() => {
+        if (window.cookieconsent && window.cookieconsent.initialise) {
+          clearInterval(waitForCookieConsent);
+
+          window.cookieconsent.initialise({
+            palette: {
+              popup: { background: '#1a1a1a' },
+              button: { background: '#E3B577' }
+            },
+            theme: 'classic',
+            type: 'opt-in',
+            storage: 'none',
+            revokable: true,
+            content: {
+              message: 'Ez a weboldal sütiket használ a Google Térkép megjelenítéséhez.',
+              allow: 'Elfogadom',
+              deny: 'Elutasítom',
+              link: 'Adatkezelés',
+              href: 'https://policies.google.com/privacy?hl=hu'
+            },
+            onInitialise: (status: string) => {
+              this.ngZone.run(() => {
+                this.loadMapIframe = window.cookieconsent.hasConsented('marketing');
+              });
+            },
+            onStatusChange: (status: string) => {
+              this.ngZone.run(() => {
+                this.loadMapIframe = window.cookieconsent.hasConsented('marketing');
+              });
+            }
           });
-        },
-        onStatusChange: (status: string) => {
-          this.ngZone.run(() => {
-            this.loadMapIframe = status === 'allow';
-          });
-        },
-        revokable: true,
-        dismissOnWindowClick: false,
-        dismissOnTimeout: 0,
-        dismissOnScroll: false,
-      });
+        }
+      }, 250);
     }
   }
 }
