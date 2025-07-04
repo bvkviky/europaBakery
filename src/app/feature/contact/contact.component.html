@@ -34,11 +34,28 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
     </div>
-    <ng-template #showConsentNotice>
-      <div class="text-center p-4 text-sm">
-        A térkép megtekintéséhez kérem, fogadja el a cookie-kat.
-      </div>
-    </ng-template>
+   <ng-template #showConsentNotice>
+  <!-- Tailwind-stílusú süti értesítő -->
+  <div class="fixed bottom-4 left-4 right-4 md:left-auto md:right-8 z-50 bg-white border border-gray-300 shadow-lg rounded-lg p-4 max-w-sm mx-auto text-sm flex flex-col md:flex-row md:items-center gap-4">
+    <div class="flex-1 text-gray-800">
+      Ez a térkép cookie-kat használ. Kérlek, fogadd el a marketing célú sütiket a megjelenítéshez.
+    </div>
+    <div class="flex flex-col md:flex-row gap-2">
+      <button
+        class="bg-gray-100 text-gray-700 px-4 py-2 rounded hover:bg-gray-200"
+        (click)="denyCookies()"
+      >
+        Elutasítom
+      </button>
+      <button
+        class="bg-[#E3B577] text-white px-4 py-2 rounded hover:bg-yellow-600"
+        (click)="acceptCookies()"
+      >
+        Elfogadom
+      </button>
+    </div>
+  </div>
+</ng-template>
 
   </div>
 </div>
