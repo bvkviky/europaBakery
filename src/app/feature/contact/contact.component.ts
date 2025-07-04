@@ -1,57 +1,55 @@
-import { Component, Inject, OnInit, PLATFORM_ID, NgZone } from '@angular/core';
+import {
+  Component,
+  Inject,
+  NgZone,
+  OnInit,
+  PLATFORM_ID
+} from '@angular/core';
 import { isPlatformBrowser, NgIf } from '@angular/common';
-
-declare let window: any;
 
 @Component({
   selector: 'app-contact',
+  standalone: true,
   templateUrl: './contact.component.html',
-  imports: [NgIf],
   styleUrls: ['./contact.component.css'],
+  imports: [NgIf]
 })
 export class ContactComponent implements OnInit {
   loadMapIframe = false;
+  showConsentBanner = false;
 
   constructor(
-    @Inject(PLATFORM_ID) private platformId: object,
+    @Inject(PLATFORM_ID) private platformId: Object,
     private ngZone: NgZone
   ) {}
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
-      const waitForCookieConsent = setInterval(() => {
-        if (window.cookieconsent && window.cookieconsent.initialise) {
-          clearInterval(waitForCookieConsent);
+      const storedConsent = localStorage.getItem('consent');
 
-          window.cookieconsent.initialise({
-            palette: {
-              popup: { background: '#1a1a1a' },
-              button: { background: '#E3B577' }
-            },
-            theme: 'classic',
-            type: 'opt-in',
-            storage: 'none',
-            revokable: true,
-            content: {
-              message: 'Ez a weboldal sütiket használ a Google Térkép megjelenítéséhez.',
-              allow: 'Elfogadom',
-              deny: 'Elutasítom',
-              link: 'Adatkezelés',
-              href: 'https://policies.google.com/privacy?hl=hu'
-            },
-            onInitialise: (status: string) => {
-              this.ngZone.run(() => {
-                this.loadMapIframe = window.cookieconsent.hasConsented('marketing');
-              });
-            },
-            onStatusChange: (status: string) => {
-              this.ngZone.run(() => {
-                this.loadMapIframe = window.cookieconsent.hasConsented('marketing');
-              });
-            }
-          });
-        }
-      }, 250);
+      if (storedConsent === 'accepted') {
+        this.loadMapIframe = true;
+      } else if (storedConsent === 'denied') {
+        this.loadMapIframe = false;
+      } else {
+        this.showConsentBanner = true;
+      }
     }
+  }
+
+  acceptCookies(): void {
+    this.ngZone.run(() => {
+      this.loadMapIframe = true;
+      this.showConsentBanner = false;
+      localStorage.setItem('consent', 'accepted');
+    });
+  }
+
+  denyCookies(): void {
+    this.ngZone.run(() => {
+      this.loadMapIframe = false;
+      this.showConsentBanner = false;
+      localStorage.setItem('consent', 'denied');
+    });
   }
 }
