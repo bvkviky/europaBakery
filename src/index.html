@@ -6,14 +6,43 @@
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
-        <!-- 🔐 Cookiebot script -->
-    <script
-      id="Cookiebot"
-      src="https://consent.cookiebot.com/uc.js"
-      data-cbid="A-TE-ID"
-      data-blockingmode="auto"
-      type="text/javascript">
-    </script>
+    <!-- Silktide CSS -->
+<link rel="stylesheet" href="https://cdn.silktide.com/consent-manager.css" />
+
+<!-- Silktide JS -->
+<script src="https://cdn.silktide.com/consent-manager.js"></script>
+
+<script>
+  silktideCookieBannerManager.updateCookieBannerConfig({
+    cookieTypes: [
+      {
+        id: 'essential',
+        name: 'Szükséges sütik',
+        description: 'Ezek a sütik elengedhetetlenek az oldal működéséhez.',
+        required: true,
+        defaultValue: true
+      },
+      {
+        id: 'marketing',
+        name: 'Marketing sütik',
+        description: 'Segítenek személyre szabott tartalmat és hirdetést nyújtani.',
+        defaultValue: false
+      }
+    ],
+    text: {
+      banner: {
+        description: '<p>Ez a weboldal sütiket használ a jobb felhasználói élmény érdekében.</p>',
+        acceptAllButtonText: 'Mindent elfogadok',
+        rejectNonEssentialButtonText: 'Csak szükséges sütik',
+        preferencesButtonText: 'Beállításaim'
+      }
+    },
+    position: {
+      banner: 'bottomCenter',
+      cookieIcon: 'bottomLeft'
+    }
+  });
+</script>
   </head>
   <body>
     <app-root></app-root>
